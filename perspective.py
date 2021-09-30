@@ -7,11 +7,13 @@ from PIL import Image
 def rotatexyz(image: Image.Image, x: float, y: float, z: float) -> Image.Image:  # All angles in degrees
     """
     img: PIL Image
-    x: x axis rotation (perspective)
-    y: y axis rotation (perspective)
+    x: x axis rotation (perspective) - keep between -90 and 90
+    y: y axis rotation (perspective) - keep between -90 and 90
     z: z axis rotation (euclidean)
     return: PIL Image
     """
+    assert(-90 < x < 90, 'required: -90 < x < 90')
+    assert(-90 < y < 90, 'required: -90 < y < 90')
 
     # easy z rotation
     image = image.rotate(z, fillcolor=(0, 0, 0), expand=True)
