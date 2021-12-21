@@ -1,4 +1,5 @@
 # Dataset Generation
+This repo is the starting point of the PART dataset generation effort to make a synthetic dataset for training a ML model for the AUVSI SUAS competition. See purdueieee.org/partieee for more info.
 
 ## Target Generation
 Run src/make_targets.py to generate targets by calling\
